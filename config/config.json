@@ -14,6 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_var": "JAWSDB_URL"
+    "use_env_var": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
