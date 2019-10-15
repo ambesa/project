@@ -5,6 +5,7 @@
 
 var express = require("express");
 var db = require("./models");
+require("dotenv").config();
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
