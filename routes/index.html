@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  
+  
 
 </head>
 
@@ -95,12 +98,12 @@
     // Here we grab the form elements
     var companydata = {
       // grab the user input from the input element with id=name
-      companyname: $("#company-name").val().trim(),
-      companyphone: $("#company-phone").val().trim(),
-      companyadress: $("#company-adress").val().trim(),
-      companyshipment: $("#company-shipment").val().trim()
+      company_name: $("#company-name").val().trim(),
+      phone_number: $("#company-phone").val().trim(),
+      delivery_adress: $("#company-adress").val().trim(),
+      shipment_type: $("#company-shipment").val().trim()
     };
-
+     
 
     
 
@@ -109,7 +112,7 @@
     // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
     // depending on if a tables is available or not.
 
-    $.post("/api/drivers", companydata,
+    $.post("/api/delivery-request", companydata,
       function(data) {
 
         // If a table is available... tell user they are booked.
