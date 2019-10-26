@@ -20,7 +20,12 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../routes/index.html"));
+
   });
+  app.get("/list", function(req, res) {
+    res.sendFile(path.join(__dirname, "./list.html"));
+  });
+
 
   // If no matching route is found default to home
   //app.get("*", function(req, res) {
